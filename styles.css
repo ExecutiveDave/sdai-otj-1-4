@@ -1,0 +1,39 @@
+/* Styling for the image section */
+.image-section {
+  display: flex;
+  gap: 1in; /* Adds an inch of space between the images */
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.image-section figure {
+  width: 200px; /* Adjusted to approximately 4x4 inches, depending on screen */
+  max-width: 25vw; /* Limits to 25% of viewport width for responsiveness */
+  text-align: center;
+}
+
+.image-section img {
+  width: 100%; /* Ensures image fills the figure container */
+  height: auto; /* Maintains aspect ratio */
+  border-radius: 8px; /* Optional: Adds slight rounding for a polished look */
+}
+figcaption { 
+  font-size: 14px;
+} 
+
+/* Centering the title within the header */
+.page-header {
+  text-align: center; /* Centers the text horizontally */
+  padding: 1rem;
+  margin: 0 auto;
+}
+
+.page-title {
+  font-size: 2em; /* Adjust the size as needed */
+  color: #333; /* Choose a color that fits your design */
+}
+.centered-title {
+    text-align: center;
+    font-size: 2em; /* Adjust size as needed */
+    margin-top: 20px; /* Adjust spacing 
