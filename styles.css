@@ -1,39 +1,85 @@
-/* Styling for the image section */
+/* Styling for the Image Section */
 .image-section {
   display: flex;
-  gap: 1in; /* Adds an inch of space between the images */
+  gap: 1in; /* Adds an inch of space between images */
   justify-content: center;
   align-items: center;
   padding: 1rem;
 }
 
 .image-section figure {
-  width: 200px; /* Adjusted to approximately 4x4 inches, depending on screen */
-  max-width: 25vw; /* Limits to 25% of viewport width for responsiveness */
+  width: 200px; /* Approximately 4x4 inches depending on screen */
+  max-width: 25vw; /* Responsive adjustment */
   text-align: center;
 }
 
 .image-section img {
-  width: 100%; /* Ensures image fills the figure container */
-  height: auto; /* Maintains aspect ratio */
-  border-radius: 8px; /* Optional: Adds slight rounding for a polished look */
+  width: 100%; /* Fills the figure container */
+  height: 200px; /* Maintains aspect ratio */
+  border-radius: 8px; /* Optional rounded corners */
 }
-figcaption { 
+
+figcaption {
   font-size: 14px;
-} 
-
-/* Centering the title within the header */
-.page-header {
-  text-align: center; /* Centers the text horizontally */
-  padding: 1rem;
-  margin: 0 auto;
 }
 
-.page-title {
-  font-size: 2em; /* Adjust the size as needed */
-  color: #333; /* Choose a color that fits your design */
-}
+/* Main Title Styles */
 .centered-title {
-    text-align: center;
-    font-size: 2em; /* Adjust size as needed */
-    margin-top: 20px; /* Adjust spacing 
+  text-align: left; /* Left-aligned main title */
+  font-size: 2em;
+  margin-top: 20px;
+  color: #3C6E47; /* Dark green color for h1 */
+}
+
+/* Menu Section Title Styles */
+.menu-title {
+  width: 800px; /* Fixed width */
+  margin: 0 auto; /* Centers the element */
+  text-align: center;
+  font-size: 2em;
+  color: #FF6F30; /* Bright orange for menu title */
+}
+
+/* Menu Item Styles */
+section h3 {
+  color: #FFC300; /* Warm yellow for section headings */
+  font-size: 1.8em;
+  margin-top: 20px;
+}
+
+section div {
+  margin-bottom: 15px; /* Space between items */
+}
+
+section h4 {
+  font-size: 1.4em;
+  color: #3C6E47; /* Dark green for item names */
+  margin: 10px 0 5px;
+}
+
+section p {
+  font-size: 1em;
+  color: #333; /* Dark gray for item descriptions */
+  line-height: 1em;
+}
+
+/* General Heading Colors */
+h1 {
+  color: #3C6E47; /* Dark green for h1 */
+  font-family: "Arial";
+}
+
+h2 {
+  color: #FF6F30; /* Bright orange for h2 */
+  font-family: "Arial";
+}
+
+h3 {
+  color: #FFC300; /* Warm yellow for h3 */
+  font-family: "Arial";
+}
+
+h4 {
+  color: #A9A9A9; /* Light gray for h4 */
+  font-family: "Arial";
+}
