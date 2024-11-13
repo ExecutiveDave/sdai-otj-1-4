@@ -63,13 +63,31 @@ nav .nav-link:hover {
 }
 
 .image-item {
-  position: relative;
+  position: relative; /* Allows positioning of the title on top */
   width: calc(33.333% - 20px);
   margin: 10px;
 }
 
+/* Title styling for images */
+.image-title {
+  position: absolute;   /* Title is positioned absolutely inside image container */
+  top: 10px;            /* Position the title 10px from the top of the image */
+  left: 50%;            /* Center the title horizontally */
+  transform: translateX(-50%); /* Center the title by adjusting its width */
+  font-size: 1.2em;     /* Font size for the title */
+  font-weight: bold;    /* Make the title bold */
+  color: #fff;          /* White text color for the title */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Shadow for better readability */
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for visibility */
+  padding: 5px 10px;    /* Add some space around the title */
+  border-radius: 5px;   /* Optional: rounded corners for the background */
+}
+
 .image-item img {
   width: 100%;
+  height: auto;
+  max-height: 250px;   /* Adjust this to control the image height */
+  object-fit: cover;   /* Ensure the image fills the space without distortion */
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
@@ -194,27 +212,24 @@ footer ul li a img {
   color: #3C6E47;
 }
 
-.image-item {
+#favorites .image-item {
   position: relative;
   width: calc(33.333% - 20px);
   margin: 10px;
 }
 
-/* Centering "Click to See Calories" text */
-.image-item figcaption {
+#favorites .image-item figcaption {
   text-align: center;
   font-size: 1.1em;
-  color: #FF8C00; /* Orange color for the text */
+  color: #FF8C00;
   cursor: pointer;
 }
 
-/* Hide calories info initially */
-.calories-info {
+#favorites .calories-info {
   display: none;
 }
 
-/* Add hover effect for calorie section */
-.image-item:hover .calories-info {
+#favorites .image-item:hover .calories-info {
   display: block;
 }
 
