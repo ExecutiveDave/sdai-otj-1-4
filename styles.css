@@ -146,8 +146,10 @@ footer ul li {
 }
 
 footer ul li a img {
-  width: 40px;
-  height: auto;
+  width: 40px;         /* Set the width to a fixed size */
+  height: auto;        /* Allow height to adjust automatically to maintain aspect ratio */
+  object-fit: contain; /* Ensure images are scaled proportionally */
+  border: 2px solid red; /* Temporary border for debugging */
 }
 
 /* About Us section */
