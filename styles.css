@@ -1,136 +1,252 @@
-/* Styling for the Image Section */
-.image-section {
-  display: flex; /* This makes the items inside display in a row (horizontally) */
-  gap: 1rem; /* Adds space between the images */
-  justify-content: center; /* Centers the images horizontally */
-  align-items: center; /* Vertically aligns the images */
-  flex-wrap: wrap; /* This allows the images to "wrap" to the next row on small screens */
-  padding: 1rem;
+/* General body and layout styling */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+  color: #333;
 }
 
-/* Styling for each image figure */
-.image-item {
-  flex: 1 1 30%; /* Flex basis of 30% of the container width */
-  max-width: 30%; /* Ensures images don't exceed 30% of the container */
-  text-align: center; /* Centers the caption under the image */
-  position: relative; /* For positioning the calories info */
-  transition: transform 0.3s ease; /* Smooth transition effect for hover */
+/* Header styling */
+header {
+  background-color: transparent; /* Remove any blue background */
+  padding: 20px 0; /* Adjust padding for spacing */
+  text-align: center; /* Ensure the title is centered */
+  width: 100%; /* Make sure the header spans the full width of the screen */
 }
 
-/* Image hover effect */
-.image-item:hover {
-  transform: scale(1.05); /* Slight zoom effect when hovered */
-}
-
-/* Image styling */
-.image-item img {
-  width: 100%; /* Makes the image fill the container */
-  height: auto; /* Maintains aspect ratio */
-  border-radius: 8px; /* Rounded corners for the image */
-  cursor: pointer; /* Indicates that the image is clickable */
-}
-
-/* Styling for the caption */
-.image-item figcaption {
-  font-size: 14px;
-  color: #555; /* Dark gray color for the caption text */
-  margin-top: 10px;
-  font-weight: bold;
-  font-size: 1rem;
-  color: #FFC300; /* Set color for "Click to See Calories" to yellow */
-}
-
-/* Styling for the calories info (hidden by default) */
-.calories-info {
-  display: none; /* Start hidden */
-  padding: 10px;
-  background-color: rgba(0, 0, 0, 0.7); /* Dark background for calories info */
-  color: white; /* Text color for calories info */
-  font-size: 1em;
-  border-radius: 5px;
-  margin-top: 10px;
-  transition: max-height 0.5s ease-out, padding 0.3s ease-out;
-  max-height: 0; /* Hide the calories by default */
-  overflow: hidden;
-}
-
-/* When the image is clicked, show the calories */
-.image-item.active .calories-info {
-  display: block;
-  max-height: 100px; /* Slide down to show the content */
-  padding: 10px;
-}
-
-/* Main Title Styles */
+/* Main heading for the page */
 .centered-title {
-  text-align: left; /* Left-aligned main title */
-  font-size: 2em;
-  margin-top: 20px;
-  color: #3C6E47; /* Dark green for h1 */
+  font-size: 2.5em; /* Larger font size for the title */
+  color: #3C6E47; /* Dark green color for the title */
+  margin: 0; /* Remove default margin to keep it aligned properly */
+  text-align: center; /* Ensure the text is centered */
+  font-weight: bold; /* Make the title stand out */
 }
 
-/* Menu Section Title Styles */
+/* Navigation bar */
+nav.main-nav {
+  background-color: #333; /* Dark background color for navigation */
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+}
+
+/* Styling for navigation links */
+nav .nav-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav .nav-item {
+  display: inline;
+  margin: 0 15px;
+}
+
+nav .nav-link {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav .nav-link:hover {
+  text-decoration: underline;
+}
+
+/* Image section styling */
+.image-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.image-item {
+  position: relative;
+  width: calc(33.333% - 20px);
+  margin: 10px;
+}
+
+.image-item img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling for calories info */
+.calories-info {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+figcaption {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #333;
+  margin-top: 5px;
+}
+
+/* Footer styling */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Social media icon styling */
+footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+footer ul li {
+  display: inline-block;
+}
+
+footer ul li a img {
+  width: 40px;
+  height: auto;
+}
+
+/* About Us section */
+#about {
+  padding: 20px;
+  background-color: #fff;
+}
+
+#about h2 {
+  color: #3C6E47;
+}
+
+#about p {
+  font-size: 1.1em;
+  line-height: 1.6;
+  color: #555;
+}
+
+/* Menu Section */
+#menu {
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
 .menu-title {
-  width: 800px; /* Fixed width */
-  margin: 0 auto; /* Centers the element */
   text-align: center;
   font-size: 2em;
-  color: #FF6F30; /* Bright orange for menu title */
+  color: #3C6E47;
+  margin-bottom: 20px;
 }
 
-/* Menu Item Styles */
-section h3 {
-  color: #FFC300; /* Warm yellow for section headings */
-  font-size: 1.8em;
-  margin-top: 20px;
+#menu article {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
-section div {
-  margin-bottom: 15px; /* Space between items */
+#menu h3 {
+  color: #FF8C00; /* Orange color for the category titles */
 }
 
-section h4 {
-  font-size: 1.4em;
-  color: #3C6E47; /* Dark green for item names */
-  margin: 10px 0 5px;
+#menu div {
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-section p {
-  font-size: 1em;
-  color: #333; /* Dark gray for item descriptions */
-  line-height: 1em;
+#menu h4 {
+  font-size: 1.2em;
+  color: #6B4F2D; /* Brown color for dish titles */
 }
 
-/* General Heading Colors */
-h1 {
-  color: #3C6E47; /* Dark green for h1 */
-  font-family: "Arial";
+/* Special Section for Developer's Favorites */
+#favorites {
+  padding: 20px;
+  background-color: #fff;
 }
 
-h2 {
-  color: #FF6F30; /* Bright orange for h2 */
-  font-family: "Arial";
+#favorites h2 {
+  text-align: center;
+  color: #3C6E47;
 }
 
-h3 {
-  color: #FFC300; /* Warm yellow for h3 */
-  font-family: "Arial";
+.image-item {
+  position: relative;
+  width: calc(33.333% - 20px);
+  margin: 10px;
 }
 
-h4 {
-  color: #A9A9A9; /* Light gray for h4 */
-  font-family: "Arial";
+/* Centering "Click to See Calories" text */
+.image-item figcaption {
+  text-align: center;
+  font-size: 1.1em;
+  color: #FF8C00; /* Orange color for the text */
+  cursor: pointer;
 }
 
-/* Adjustments for smaller screens */
-@media (max-width: 768px) {
-  .image-item {
-    flex: 1 1 45%; /* On smaller screens, images take up 45% of the container */
-  }
+/* Hide calories info initially */
+.calories-info {
+  display: none;
 }
 
-@media (max-width: 480px) {
-  .image-item {
-    flex: 1 1 100%; /* On very small screens, images take up 100% of the container */
-  }
+/* Add hover effect for calorie section */
+.image-item:hover .calories-info {
+  display: block;
+}
+
+/* Footer - Social media icons styling */
+footer {
+  background-color: #333;
+  padding: 20px;
+}
+
+footer ul {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 0;
+}
+
+footer ul li {
+  display: inline-block;
+}
+
+footer ul li a img {
+  width: 40px;
+  height: auto;
+}
+
+footer h2 {
+  color: #FF8C00;
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+/* Ensure footer items are centered properly */
+footer {
+  text-align: center;
 }

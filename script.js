@@ -1,14 +1,27 @@
-// Select all images inside .image-item
+// Select all "See Calories" figures
 const imageItems = document.querySelectorAll('.image-item');
 
-// Loop through each image item
+// Loop through each image item to add event listeners
 imageItems.forEach(item => {
-    const img = item.querySelector('img');
-    const caloriesInfo = item.querySelector('.calories-info');
+  item.addEventListener('click', function() {
+    // Find the sibling element with the class "calories-info"
+    const caloriesInfo = this.querySelector('.calories-info');
     
-    // Add a click event to each image
-    img.addEventListener('click', () => {
-        // Toggle the 'active' class which controls the sliding effect
-        item.classList.toggle('active');  // 'item' is the .image-item, not just the image
+    // Toggle the visibility of the calories info
+    if (caloriesInfo.style.display === 'block') {
+      caloriesInfo.style.display = 'none';
+    } else {
+      caloriesInfo.style.display = 'block';
+    }
+  });
+});
+
+// Optional: For better UX, close any open calorie info when clicking elsewhere
+document.addEventListener('click', function(event) {
+  if (!event.target.closest('.image-item')) {
+    const allCaloriesInfo = document.querySelectorAll('.calories-info');
+    allCaloriesInfo.forEach(info => {
+      info.style.display = 'none';
     });
+  }
 });
